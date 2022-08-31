@@ -1,0 +1,25 @@
+@import "reset";
+@import "variables";
+@import "breakpoints";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //font-family: sans-serif;
+  font-family: montserrat, sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+header {
+  height: 58px;
+  box-shadow: 0 1px 3px 0 $gray-500, 0 1px 2px 0 $gray-500;
+  color: $gray-700;
+}
+

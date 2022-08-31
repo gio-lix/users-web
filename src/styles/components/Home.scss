@@ -1,0 +1,17 @@
+@import "src/styles/breakpoints";
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 320px);
+  justify-content: center;
+  gap: 10px;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, minmax(auto, 320px));
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+  }
+
+}
