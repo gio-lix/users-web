@@ -1,6 +1,7 @@
 import s from "./Header.module.scss"
 import MenuItems from "./menuItems";
 import React from "react";
+import {DropState, DropTitleState} from "../../typing";
 
 const menuItems = [
     {
@@ -52,7 +53,7 @@ const Header = () => {
             <div className={s.header}>
                 <nav>
                     <ul className={s.header_menu}>
-                        {menuItems.map((menu, index) => {
+                        {menuItems.map((menu: DropState<DropState<DropTitleState>>, index) => {
                             const depthLevel = 0;
                             return <MenuItems items={menu} key={index} depthLevel={depthLevel} />;
                         })}

@@ -1,3 +1,4 @@
+@import "src/styles/variables";
 
 .cart {
   width: 100%;
@@ -15,13 +16,13 @@
     transition: box-shadow 200ms ease-in-out!important;
 
     &:hover {
-      box-shadow: 7px 7px 18px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 7px 7px 18px 3px $gray-600;
       transition: box-shadow 200ms ease-in-out!important;
 
     }
 
     &.card__faceFront {
-      background-image: linear-gradient(to bottom right, #FFCE00FF, #FE4880FF);
+      background-image: linear-gradient(to bottom right, $yellow-500, $red-500);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,7 +34,7 @@
     }
 
     &.card__faceBack {
-      background-color: #F3F3F3FF;
+      background-color: $gray-50;
       transform: rotateY(180deg);
     }
   }
@@ -70,8 +71,8 @@
     height: 100px;
     margin: 0 auto 30px ;
     border-radius: 50%;
-    background-color: #FFF;
-    border: 5px solid #FFF;
+    background-color: $bg-gray-50;
+    border: 5px solid $gray-50;
     object-fit: cover;
   }
 }
@@ -84,7 +85,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom left, #FFCE00FF 10%, #FE4880FF 115%);
+  background-image: linear-gradient(to bottom left, $yellow-500 10%, $red-500 115%);
   z-index: -1;
   border-radius: 0 0 50% 0;
 }
@@ -93,14 +94,14 @@
   padding: 6px;
 
   > h3 {
-    color: #212121FF;
+    color: $gray-800;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 7px;
   }
 
   > p {
-    color: #212121FF;
+    color: $gray-800;
     font-size: 11px;
     line-height: 1.4;
   }

@@ -1,16 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
 import s from "./MenuItems.module.scss"
 import DropDown from "../dropDown";
+import {DropState, DropTitleState} from "../../../typing";
 
-type TabProps = {
-    items?: any;
+
+
+interface TabProps {
+    items: DropState<DropTitleState>;
     depthLevel: number
-};
+}
 
 const MenuItems = ({ items, depthLevel }: TabProps) => {
     const [dropdown, setDropdown] = useState(false);
 
-    let ref = useRef<any>();
+    let ref = useRef<HTMLLIElement | null>(null);
 
     useEffect(() => {
         const handler = (event: any) => {
